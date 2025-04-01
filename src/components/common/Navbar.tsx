@@ -1,4 +1,4 @@
-import { BRAND_NAME } from "../../app/shared/constants";
+import { BRAND_NAME } from "@shared/constants";
 
 const Navbar = () => {
   return (
@@ -24,9 +24,9 @@ const Navbar = () => {
             <a
               className="flex-none font-semibold text-xl text-primary focus:outline-none focus:opacity-80"
               href="#"
-              aria-label="Brand"
+              aria-label={BRAND_NAME}
             >
-              Brand
+              {BRAND_NAME}
             </a>
 
             {/* Collapse Button */}

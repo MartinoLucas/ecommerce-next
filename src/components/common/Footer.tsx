@@ -1,4 +1,4 @@
-import React from 'react';
+import { COPYRIGHT } from '@shared/constants';
 
 const Footer = () => {
   return (
@@ -20,7 +20,7 @@ const Footer = () => {
       <div className="flex flex-col md:flex-row items-center justify-between gap-3">
         {/* Marca / Copyright */}
         <span className="text-sm text-primary">
-          © 2025 Brand. All rights reserved.
+          {COPYRIGHT}
         </span>
 
         {/* Enlaces del Footer */}
