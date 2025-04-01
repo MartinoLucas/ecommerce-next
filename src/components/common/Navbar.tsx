@@ -24,8 +24,16 @@ const Navbar = () => {
         <nav className="relative w-full md:flex md:items-center md:justify-between md:gap-3 ps-5 pe-2 py-2">
           {/* Logo w/ Collapse Button */}
           <div className="flex items-center justify-between">
+            
             <a
-              className="flex-none font-semibold text-xl text-primary focus:outline-none focus:opacity-80"
+              className="flex-none font-semibold text-xl text-primary focus:outline-none focus:opacity-80 mb-1 mr-2"
+              href="#"
+              aria-label={BRAND_NAME}
+            >
+              <img src="/icons/logo.svg" alt="logo" className="w-[30px]"/>
+            </a>
+            <a
+              className="lg:block md:block hidden flex-none font-semibold text-xl text-primary focus:outline-none focus:opacity-80"
               href="#"
               aria-label={BRAND_NAME}
             >
