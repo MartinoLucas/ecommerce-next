@@ -1,3 +1,5 @@
+import { BRAND_NAME } from "../../app/shared/constants";
+
 const Navbar = () => {
   return (
     <>
@@ -8,7 +10,6 @@ const Navbar = () => {
           mx-2 lg:mx-auto           /* Para centrar en pantallas grandes */
           max-w-[66rem]            /* Ancho máximo */
           rounded-[26px]           /* Bordes redondeados */
-          
           bg-background
           shadow-high            /* Aplica la sombra al propio <header> */
           flex flex-wrap

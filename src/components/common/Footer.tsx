@@ -1,16 +1,52 @@
+import React from 'react';
+
 const Footer = () => {
-    return (
-        <>
-        <div className="bg-primary">color 1</div>
-        <div className="bg-primary-light">color 2</div>
-        <div className="bg-primary-dark">color 3</div>
-        <div className="bg-secondary">color 4</div>
-        <div className="bg-secondary-light">color 5</div>
-        <div className="bg-secondary-dark">color 6</div>
+  return (
+    <footer
+      className="
+        fixed
+        bottom-0
+        inset-x-0
+        z-50
+        mx-auto
+        max-w-[66rem]
+        rounded-t-[26px]        /* Solo redondea la parte superior */
+        border border-secondary-dark
+        bg-background
+        shadow-medium
+        p-4
+      "
+    >
+      <div className="flex flex-col md:flex-row items-center justify-between gap-3">
+        {/* Marca / Copyright */}
+        <span className="text-sm text-primary">
+          © 2025 Brand. All rights reserved.
+        </span>
 
-        <div className="shadow-high relative top-7 m-auto w-80 h-80 rounded-lg p-5">shadow</div>
-        </>
-    )
-}
+        {/* Enlaces del Footer */}
+        <div className="flex flex-wrap items-center gap-4">
+          <a
+            href="#"
+            className="text-foreground hover:text-primary-dark focus:text-primary-dark text-sm"
+          >
+            Privacy
+          </a>
+          <a
+            href="#"
+            className="text-foreground hover:text-primary-dark focus:text-primary-dark text-sm"
+          >
+            Terms
+          </a>
+          <a
+            href="#"
+            className="text-foreground hover:text-primary-dark focus:text-primary-dark text-sm"
+          >
+            Contact
+          </a>
+        </div>
+      </div>
+    </footer>
+  );
+};
 
-export default Footer
+export default Footer;
