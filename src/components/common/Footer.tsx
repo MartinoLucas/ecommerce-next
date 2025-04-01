@@ -11,9 +11,11 @@ const Footer = () => {
         mx-auto
         max-w-[66rem]
         rounded-t-[26px]        /* Solo redondea la parte superior */
-        bg-background
+        
         shadow-high-top
         p-4
+
+        glass-secondary
       "
     >
       <div className="flex flex-col md:flex-row items-center justify-between gap-3">

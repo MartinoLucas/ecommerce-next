@@ -7,15 +7,18 @@ const Navbar = () => {
       <header
         className="
           sticky top-4 inset-x-0
-          mx-2 lg:mx-auto           /* Para centrar en pantallas grandes */
-          max-w-[66rem]            /* Ancho máximo */
+          mx-auto lg:mx-auto           /* Para centrar en pantallas grandes */
+          md:mx-auto
+          lg:max-w-[66rem]            /* Ancho máximo */
+          md:max-w-[48rem]            /* Ancho máximo */
+          max-w-[20rem]               /* Ancho máximo */
           rounded-[26px]           /* Bordes redondeados */
-          bg-background
+          glass-secondary             /* Fondo */
           shadow-high-bottom            /* Aplica la sombra al propio <header> */
           flex flex-wrap
           md:justify-start
           md:flex-nowrap
-          z-50 w-full
+          z-[99999] w-full
         "
       >
         <nav className="relative w-full md:flex md:items-center md:justify-between md:gap-3 ps-5 pe-2 py-2">
@@ -41,8 +44,8 @@ const Navbar = () => {
                   rounded-full
                   border border-secondary-dark
                   text-foreground
-                  hover:bg-secondary-light
-                  focus:bg-secondary-light
+                  hover:bg-secondary
+                  focus:bg-secondary
                   disabled:opacity-50
                   disabled:pointer-events-none
                 "
