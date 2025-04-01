@@ -11,7 +11,7 @@ const Navbar = () => {
           max-w-[66rem]            /* Ancho máximo */
           rounded-[26px]           /* Bordes redondeados */
           bg-background
-          shadow-high            /* Aplica la sombra al propio <header> */
+          shadow-high-bottom            /* Aplica la sombra al propio <header> */
           flex flex-wrap
           md:justify-start
           md:flex-nowrap

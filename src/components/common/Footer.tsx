@@ -11,9 +11,8 @@ const Footer = () => {
         mx-auto
         max-w-[66rem]
         rounded-t-[26px]        /* Solo redondea la parte superior */
-        border border-secondary-dark
         bg-background
-        shadow-medium
+        shadow-high-top
         p-4
       "
     >

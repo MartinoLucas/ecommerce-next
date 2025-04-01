@@ -11,9 +11,17 @@ export default {
   theme: {
     extend: {
       boxShadow: {
-        low: "var(--shadow-elevation-low)",
-        medium: "var(--shadow-elevation-medium)",
-        high: "var(--shadow-elevation-high)",
+        //low: "var(--shadow-elevation-low-bottom)",
+        //medium: "var(--shadow-elevation-medium-bottom)",
+        //high: "var(--shadow-elevation-high-bottom)",
+
+        "low-top": "var(--shadow-elevation-low-top)",
+        "medium-top": "var(--shadow-elevation-medium-top)",
+        "high-top": "var(--shadow-elevation-high-top)",
+
+        "low-bottom": "var(--shadow-elevation-low-bottom)",
+        "medium-bottom": "var(--shadow-elevation-medium-bottom)",
+        "high-bottom": "var(--shadow-elevation-high-bottom)",
       },
       colors: {
         // background: "var(--background)",
