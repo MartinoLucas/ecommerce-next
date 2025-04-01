@@ -7,7 +7,7 @@ const Hero = () => {
             overflow-hidden
 
             w-full
-            lg:min-h-[91vh]
+            lg:min-h-[90vh]
             md:min-h-[85vh]
             min-h-[80vh]
             flex
@@ -26,7 +26,7 @@ const Hero = () => {
                 <img
                     src="vinos_exclusivos.png"
                     alt="Vinos exclusivos"
-                    className="w-full h-full object-cover rounded-[26px]"
+                    className="w-full h-full object-cover rounded-[26px] shadow-medium-bottom"
                 />
             </div>
 
