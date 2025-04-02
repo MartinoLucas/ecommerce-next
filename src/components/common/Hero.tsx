@@ -11,6 +11,8 @@ const Hero = () => {
             md:min-h-[85vh]
             min-h-[80vh]
             flex
+            flex-col-reverse
+            sm:flex-row
             items-center
             justify-center
             bg-secondary
@@ -22,7 +24,7 @@ const Hero = () => {
             
         ">
         
-            <div className="hidden lg:block w-1/2 h-full mr-4">
+            <div className="my-6 lg:w-1/2 h-full lg:mr-4">
                 <img
                     src="vinos_exclusivos.png"
                     alt="Vinos exclusivos"
@@ -38,7 +40,7 @@ const Hero = () => {
                     Explora nuestra selección boutique, ediciones limitadas y experiencias únicas.
                 </p>
                 
-                <button className="
+                <button disabled className="
                     bg-primary
                     text-secondary
                     hover:bg-primary-dark
@@ -49,6 +51,9 @@ const Hero = () => {
                     transition
                     duration-200
                     focus:outline-none
+                    disabled:opacity-50
+                    disabled:cursor-not-allowed
+                    disabled:hover:bg-primary
                 ">
                     Ver Tienda
                 </button>
