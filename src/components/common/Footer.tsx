@@ -1,4 +1,4 @@
-import { COPYRIGHT } from '@shared/constants';
+import { BRAND_SOCIAL_MEDIA, COPYRIGHT } from '@shared/constants';
 
 const Footer = () => {
   return (
@@ -26,6 +26,26 @@ const Footer = () => {
 
         {/* Enlaces del Footer */}
         <div className="flex flex-wrap items-center gap-4">
+          {
+            BRAND_SOCIAL_MEDIA.map((socialMedia, index) => (
+              <a
+                key={index}
+                href={socialMedia.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground hover:text-primary-dark focus:text-primary-dark text-sm"
+              >
+                {/* <img
+                  src={socialMedia.icon}
+                  alt={socialMedia.name}
+                  className="w-6 h-6"
+                /> */}
+                {socialMedia.name}
+              </a>
+            ))
+          }
+        </div>
+        {/* <div className="flex flex-wrap items-center gap-4">
           <a
             href="#"
             className="text-foreground hover:text-primary-dark focus:text-primary-dark text-sm"
@@ -44,7 +64,7 @@ const Footer = () => {
           >
             Contact
           </a>
-        </div>
+        </div> */}
       </div>
     </footer>
   );

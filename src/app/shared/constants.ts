@@ -21,4 +21,22 @@ export const BRAND_BENEFITS = [
         description: "Sorprendé tu paladar con ediciones limitadas y raras.",
         icon: "icons/experiencia_unica.svg",
     }
-]
+];
+
+export const BRAND_SOCIAL_MEDIA = [
+    {
+        name: "WhatsApp",
+        url: "https://www.wa.me/2364360402",
+        icon: "icons/whatsapp.svg",
+    },
+    {
+        name: "Instagram",
+        url: "https://www.instagram.com/cuartageneracionvinoss",
+        icon: "icons/instagram.svg",
+    },
+    // {
+    //     name: "Twitter",
+    //     url: "https://www.twitter.com/cuartageneracionvinos",
+    //     icon: "icons/twitter.svg",
+    // },
+];
