@@ -33,7 +33,7 @@ const Navbar = () => {
               <img src="/icons/logo.svg" alt="logo" className="w-[30px]"/>
             </a>
             <a
-              className="lg:block md:block hidden flex-none font-semibold text-xl text-primary focus:outline-none focus:opacity-80"
+              className="lg:block hidden flex-none font-semibold text-xl text-primary focus:outline-none focus:opacity-80"
               href="#"
               aria-label={BRAND_NAME}
             >
