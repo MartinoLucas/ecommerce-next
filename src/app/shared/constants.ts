@@ -1,4 +1,3 @@
-import { title } from "process";
 
 export const BRAND_NAME = "Cuarta Generación Vinos";
 export const BRAND_NAME_REDUCED = "4G Vinos";
