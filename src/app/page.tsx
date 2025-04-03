@@ -10,13 +10,15 @@ import BenefitsSectionCopy from "@components/common/sections/BenefitSectionCopy"
 
 export default function Home() {
   return (
-    <div className="mt-4">
+    <div>
       <Navbar />
-      <Hero />
-      <BenefitsSection />
-      <AboutUsSection />
-      <FourClubSection />
-      <LocationSection />
+      <main>
+        <Hero />
+        <BenefitsSection />
+        <AboutUsSection />
+        <FourClubSection />
+        <LocationSection />
+      </main>
       <Footer />
     </div>
   );
