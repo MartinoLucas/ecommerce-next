@@ -5,8 +5,6 @@ import BenefitsSection from "@components/common/BenefitSection";
 import AboutUsSection from "@components/common/sections/AboutUsSection";
 import FourClubSection from "@components/common/sections/FourClubSection";
 import LocationSection from "@components/common/sections/LocationSection";
-import FeaturedWines from "@components/common/sections/FeaturedWines";
-import BenefitsSectionCopy from "@components/common/sections/BenefitSectionCopy";
 
 export default function Home() {
   return (
