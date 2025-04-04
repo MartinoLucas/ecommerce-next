@@ -1,4 +1,4 @@
-import { BRAND_NAME } from "@shared/constants";
+import { BRAND_NAME, BRAND_NAV_OPTIONS, BRAND_SVG_LOGO } from "@shared/constants";
 
 const Navbar = () => {
   return (
@@ -30,7 +30,7 @@ const Navbar = () => {
               href="#"
               aria-label={BRAND_NAME}
             >
-              <img src="/icons/logo.svg" alt="logo" className="w-[30px]"/>
+              <img src={BRAND_SVG_LOGO} alt="logo" className="w-[30px]"/>
             </a>
             <a
               className="lg:block hidden flex-none font-semibold text-xl text-primary focus:outline-none focus:opacity-80"
@@ -43,7 +43,6 @@ const Navbar = () => {
             {/* Collapse Button */}
             <div className="md:hidden">
               <button
-              disabled
                 type="button"
                 className="
                   hs-collapse-toggle
@@ -110,7 +109,40 @@ const Navbar = () => {
           >
             <div className="overflow-hidden overflow-y-auto max-h-[75vh] [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-secondary-light [&::-webkit-scrollbar-thumb]:bg-primary-light">
               <div className="py-2 md:py-0 flex flex-col md:flex-row md:items-center md:justify-end gap-0.5 md:gap-1">
-                <a
+                
+                {BRAND_NAV_OPTIONS.map((option, index) => (
+                  <a
+                    className="p-2 flex items-center text-sm text-primary focus:outline-none focus:text-primary"
+                    href={option.href}
+                    key={index}
+                    aria-label={option.label}
+                    aria-current="page"
+                  >
+                    <svg
+                      className="shrink-0 size-4 me-3 md:me-2 block md:hidden"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
+                      <path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                    </svg>
+                    <img
+                      src={option.icon}
+                      alt="logo"
+                      className="w-[30px] me-3 md:me-2 block md:hidden"
+                    />
+                    {option.label}
+                  </a>
+                ))}
+                
+                {/*<a
                   className="p-2 flex items-center text-sm text-primary focus:outline-none focus:text-primary"
                   href="#"
                   aria-current="page"
@@ -201,7 +233,7 @@ const Navbar = () => {
                     <path d="M10 6h8v4h-8V6Z" />
                   </svg>
                   Blog
-                </a>
+                </a>*/}
 
                 {/* Dropdown */}
                 {/* <div className="hs-dropdown [--strategy:static] md:[--strategy:fixed] [--adaptive:none] [--is-collapse:true] md:[--is-collapse:false]">
