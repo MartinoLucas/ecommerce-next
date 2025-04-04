@@ -7,9 +7,7 @@ const Hero = () => {
             overflow-hidden
 
             w-full
-            lg:min-h-[90vh]
-            md:min-h-[85vh]
-            min-h-[80vh]
+            min-h-screen
             flex
             flex-col-reverse
             sm:flex-row
