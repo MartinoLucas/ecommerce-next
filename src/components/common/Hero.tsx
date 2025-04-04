@@ -24,7 +24,7 @@ const Hero = () => {
             
         ">
         
-            <div className="my-6 lg:w-1/2 md:mr-4 lg:mr-4 relative">
+            <div className="my-6 lg:w-1/2 mr-2 md:mr-4 lg:mr-4 relative">
                 <img
                     src="vinoteca_con_barril.png"
                     alt="Vinos exclusivos"
