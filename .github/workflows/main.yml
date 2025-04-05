@@ -33,7 +33,7 @@ jobs:
           if [ -d ".git" ]; then
             echo "Repositorio ya clonado, haciendo reset y pull"
             git reset --hard
-            git pull origin main
+            git pull origin deploy
           else
             echo "Directorio no vacío, limpiando antes de clonar"
             # Guardar archivos importantes si es necesario
