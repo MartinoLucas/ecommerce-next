@@ -49,5 +49,4 @@ jobs:
           
           pnpm install
           pnpm build
-          pm2 startOrReload ecosystem.config.js
           EOF
