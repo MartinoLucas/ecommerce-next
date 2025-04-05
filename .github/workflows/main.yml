@@ -2,7 +2,7 @@ name: Despliegue a VPS
 on:
   push:
     branches:
-      - main # Ahora escucha la rama main
+      - deploy
 jobs:
   deploy:
     runs-on: ubuntu-latest
