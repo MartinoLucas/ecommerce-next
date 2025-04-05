@@ -3,19 +3,199 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Fondo y texto base (modo claro) */
+  /* --background: #ffffff;
+  --foreground: #171717; */
+
+  /* Primary */
+  --primary: #961016;
+  --primary-light: #ab2124;
+  --primary-dark: #700b0d;
+
+  /* Secondary */
+  --secondary: #fbf3dc;
+  --secondary-light: #fdf7eb;
+  --secondary-dark: #e8e0c8;
+
+  /* Texto adicional */
+  --text-base: #171717;    /* Texto normal, si quisieras usarlo en lugar de foreground */
+  --text-heading: #111111; /* Más oscuro para titulares */
+  --text-muted: #6b7280;   /* Gris suave para texto secundario, placeholders, etc. */
+
+  /* Superficies o fondos intermedios */
+  --surface: #f9fafb;      /* fondo de tarjetas, secciones */
+  --surface-100: #f3f4f6; 
+  --surface-200: #e5e7eb;
+
+  /* Estados (opcional) */
+  --success: #16a34a; 
+  --error: #dc2626;
+  --warning: #f59e0b;
+  --info: #0ea5e9;
+
+  --shadow-color: 45deg 20% 52%;
+  /* --shadow-color: var(--primary); */
+  --shadow-elevation-low-bottom:
+    1px 1px 1.4px hsl(var(--shadow-color) / 0.48),
+    1.5px 1.5px 2.1px -1.7px hsl(var(--shadow-color) / 0.39),
+    4px 4px 5.5px -3.5px hsl(var(--shadow-color) / 0.3);
+  --shadow-elevation-medium-bottom:
+    1px 1px 1.4px hsl(var(--shadow-color) / 0.51),
+    2.7px 2.7px 3.7px -1.2px hsl(var(--shadow-color) / 0.43),
+    7.6px 7.6px 10.5px -2.3px hsl(var(--shadow-color) / 0.36),
+    20px 20px 27.6px -3.5px hsl(var(--shadow-color) / 0.29);
+  --shadow-elevation-high-bottom:
+    1px 1px 1.4px hsl(var(--shadow-color) / 0.47),
+    4px 4px 5.5px -0.5px hsl(var(--shadow-color) / 0.44),
+    7.9px 7.9px 10.9px -1px hsl(var(--shadow-color) / 0.4),
+    14.2px 14.2px 19.6px -1.5px hsl(var(--shadow-color) / 0.37),
+    24.9px 24.9px 34.3px -2px hsl(var(--shadow-color) / 0.34),
+    41.6px 41.6px 57.4px -2.5px hsl(var(--shadow-color) / 0.3),
+    66.1px 66.1px 91.1px -3px hsl(var(--shadow-color) / 0.27),
+    100px 100px 137.9px -3.5px hsl(var(--shadow-color) / 0.23);
+
+  --shadow-color: 45deg 20% 52%;
+  --shadow-elevation-low-top:
+    -1px -1px 1.4px hsl(var(--shadow-color) / 0.48),
+    -1.5px -1.5px 2.1px -1.7px hsl(var(--shadow-color) / 0.39),
+    -4px -4px 5.5px -3.5px hsl(var(--shadow-color) / 0.3);
+  --shadow-elevation-medium-top:
+    -1px -1px 1.4px hsl(var(--shadow-color) / 0.51),
+    -2.7px -2.7px 3.7px -1.2px hsl(var(--shadow-color) / 0.43),
+    -7.6px -7.6px 10.5px -2.3px hsl(var(--shadow-color) / 0.36),
+    -20px -20px 27.6px -3.5px hsl(var(--shadow-color) / 0.29);
+  --shadow-elevation-high-top:
+    -1px -1px 1.4px hsl(var(--shadow-color) / 0.47),
+    -4px -4px 5.5px -0.5px hsl(var(--shadow-color) / 0.44),
+    -7.9px -7.9px 10.9px -1px hsl(var(--shadow-color) / 0.4),
+    -14.2px -14.2px 19.6px -1.5px hsl(var(--shadow-color) / 0.37),
+    -24.9px -24.9px 34.3px -2px hsl(var(--shadow-color) / 0.34),
+    -41.6px -41.6px 57.4px -2.5px hsl(var(--shadow-color) / 0.3),
+    -66.1px -66.1px 91.1px -3px hsl(var(--shadow-color) / 0.27),
+    -100px -100px 137.9px -3.5px hsl(var(--shadow-color) / 0.23);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* Fondo y texto base (modo oscuro) */
+    /* --background: #0a0a0a;
+    --foreground: #ededed; */
+
+    --jkfhakljfaklprimary: rgb(178, 26, 32);
+
+    /* Primary */
+    --primary: #b21a20;
+    --primary-light: #c23031;
+    --primary-dark: #901014;
+
+    /* Secondary */
+    --secondary: #f1e7c9;
+    --secondary-light: #f7f2e7;
+    --secondary-dark: #d6ccb1;
+
+    /* Texto adicional */
+    --text-base: #ededed;
+    --text-heading: #f5f5f5;
+    --text-muted: #9ca3af;
+
+    /* Superficies o fondos intermedios */
+    --surface: #1f1f1f;
+    --surface-100: #2a2a2a;
+    --surface-200: #3b3b3b;
+
+    /* Estados (opcional) */
+    --success: #22c55e;
+    --error: #ef4444;
+    --warning: #fbbf24;
+    --info: #38bdf8;
   }
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  /* Por defecto, usas foreground como color del texto 
+     y background como color de fondo */
+  color: var(--primary);
+  background: var(--secondary);
   font-family: Arial, Helvetica, sans-serif;
+
+  scroll-behavior: smooth;
 }
+
+/* DIVIDER */
+.custom-shape-divider-bottom-1743507935 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1743507935 svg {
+  position: relative;
+  display: block;
+  width: calc(169% + 1.3px);
+  height: 180px;
+  transform: rotateY(180deg);
+
+  width: 100%;
+  /*height: auto;*/
+}
+
+.custom-shape-divider-bottom-1743507935 .shape-fill {
+  fill: var(--secondary-dark);
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+  .custom-shape-divider-bottom-1743507935 svg {
+      width: calc(300% + 1.3px);
+      height: 133px;
+  }
+}
+
+/*.glass-secondary-bk{
+  background: #fbf3dc66;
+  box-shadow: 0 8px 32px 0 #1f26875e;
+  backdrop-filter: blur( 9px );
+  -webkit-backdrop-filter: blur( 9px );
+  border-radius: 10px;
+  border: 1px solid #ffffff2e;
+}*/
+
+.glass-secondary{
+  background: rgba(251, 243, 220, 0.4);
+  /*box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.369);*/
+  backdrop-filter: blur( 9px );
+  -webkit-backdrop-filter: blur( 9px );
+  /*border-radius: 10px;*/
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* SCROLLBAR */
+/* SCROLLBAR GLOBAL CUSTOM */
+* {
+  scrollbar-width: auto;
+}
+
+*::-webkit-scrollbar {
+  width: 18px;
+  height: 18px;
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--secondary-dark);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--secondary);
+  border-radius: 9999px;
+  border: 4px solid var(--secondary-dark);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: var(--secondary);
+}
+
