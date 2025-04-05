@@ -3,7 +3,6 @@ import Footer from "@components/common/Footer";
 import Navbar from "@components/common/Navbar";
 import BenefitsSection from "@components/common/BenefitSection";
 import AboutUsSection from "@components/common/sections/AboutUsSection";
-import FourClubSection from "@components/common/sections/FourClubSection";
 import LocationSection from "@components/common/sections/LocationSection";
 
 export default function Home() {
@@ -14,7 +13,6 @@ export default function Home() {
         <Hero />
         <BenefitsSection />
         <AboutUsSection />
-        {/* <FourClubSection /> */}
         <LocationSection />
       </main>
       <Footer />
