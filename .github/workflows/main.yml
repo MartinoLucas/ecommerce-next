@@ -1,32 +1,53 @@
 name: Despliegue a VPS
-
 on:
   push:
     branches:
-      - main  # escucha la rama main
-
+      - main # Ahora escucha la rama main
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout del código
         uses: actions/checkout@v3
-
+      
       - name: Configurar SSH
         run: |
           mkdir -p ~/.ssh
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
           ssh-keyscan -H 82.29.60.49 >> ~/.ssh/known_hosts
-
+      
       - name: Desplegar en VPS
         run: |
           ssh -i ~/.ssh/id_ed25519 root@82.29.60.49 << 'EOF'
-            set -e
-            cd ~/deploy/ecommerce
-            git pull origin main || (git clone git@github.com:MartinoLucas/ecommerce-next.git . && git checkout main)
-            pnpm install
-            pnpm build
-            pm2 startOrReload ecosystem.config.js
+          set -e
+          
+          # Verifica si el directorio existe
+          if [ ! -d "~/deploy/ecommerce" ]; then
+            mkdir -p ~/deploy/ecommerce
+          fi
+          
+          cd ~/deploy/ecommerce
+          
+          # Comprueba si existe .git para determinar si es un repositorio
+          if [ -d ".git" ]; then
+            echo "Repositorio ya clonado, haciendo reset y pull"
+            git reset --hard
+            git pull origin main
+          else
+            echo "Directorio no vacío, limpiando antes de clonar"
+            # Guardar archivos importantes si es necesario
+            # mv config.json config.json.backup
+            
+            # Limpiar directorio (excepto backups si hay)
+            rm -rf * .[^.]*
+            
+            echo "Clonando repositorio"
+            git clone https://github.com/MartinoLucas/ecommerce-next.git .
+            git checkout main
+          fi
+          
+          pnpm install
+          pnpm build
+          pm2 startOrReload ecosystem.config.js
           EOF
