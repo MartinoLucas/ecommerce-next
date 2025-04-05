@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Directorio donde están los archivos generados por next build
-const outDir = path.join(__dirname, 'out');
+const outDir = path.join(__dirname, '../html');
 
 // Función para procesar archivos HTML
 function processHTMLFiles(directory) {

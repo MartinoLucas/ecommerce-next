@@ -23,11 +23,11 @@ jobs:
           set -e
           
           # Verifica si el directorio existe
-          if [ ! -d "~/deploy/ecommerce" ]; then
-            mkdir -p ~/deploy/ecommerce
+          if [ ! -d "/var/www/ecommerce" ]; then
+            mkdir -p /var/www/ecommerce
           fi
           
-          cd /var/www/html
+          cd /var/www/ecommerce
           
           # Comprueba si existe .git para determinar si es un repositorio
           if [ -d ".git" ]; then
