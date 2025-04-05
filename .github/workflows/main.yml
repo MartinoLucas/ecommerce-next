@@ -27,7 +27,7 @@ jobs:
             mkdir -p ~/deploy/ecommerce
           fi
           
-          cd ~/deploy/ecommerce
+          cd /var/www/html
           
           # Comprueba si existe .git para determinar si es un repositorio
           if [ -d ".git" ]; then
