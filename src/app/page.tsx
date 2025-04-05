@@ -14,7 +14,7 @@ export default function Home() {
         <Hero />
         <BenefitsSection />
         <AboutUsSection />
-        <FourClubSection />
+        {/* <FourClubSection /> */}
         <LocationSection />
       </main>
       <Footer />
